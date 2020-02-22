@@ -11,7 +11,7 @@ class Main{
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Game game=new Game();
 		jf.add(game);
-		jf.setBounds(10,10,905,700);
+		jf.setBounds(10,10,880,680);
 		jf.setVisible(true);
 		//Graphics g;
 		//game.paintComponent(g);
