@@ -4,7 +4,7 @@ Snaky can now do all the things like from eating the food to dying.
 Though some bugs need to be fixed but apart from those it's playable.  
 
 # **Rules of IamSnaky:**  
-Just like any othe snake games like:
+Just like any other snake games like:
 1. Snaky is hungry and needs to eat the food. Use the arrow keys to move Snaky and direct it to its food.
 2. When Snaky eats the foods it increases its length by one block and that increases the score by 10 (Which initiates with 0).
 3. If Snaky hits any one of the walls it comes from just its opposite.
