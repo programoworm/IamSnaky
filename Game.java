@@ -22,6 +22,7 @@ public class Game extends JPanel implements KeyListener,ActionListener{
 	private boolean pause=false;
 	private boolean flag=false;
 	private boolean ov=false;
+	private int count=0;
 	private void food(Graphics g){
 		g.setColor(Color.RED);
 		g.fillOval(fx,fy,20,20);
@@ -51,17 +52,18 @@ public class Game extends JPanel implements KeyListener,ActionListener{
 		g.setColor(Color.BLACK);
 		g.setFont(new Font("TimesRoman", Font.BOLD, 30));
 		g.drawString("Game Over",350,300);
-		System.out.println("over() called");
+		repaint();
+		//System.out.println("over() called");
 	}
 	public Game(){
 		//height=576-75;
 		//width=850-25;
-		System.out.println("Height: "+height+" Width: "+width);
+		//System.out.println("Height: "+height+" Width: "+width);
 		fx=rand.nextInt((width-ix-inc)/20)*20+20;
 		fy=rand.nextInt((height-iy-inc)/20)*20+80;
 		sx[0]=ix;
 		sy[0]=iy;
-		System.out.println("fx: "+fx+" fy: "+fy);
+		//System.out.println("fx: "+fx+" fy: "+fy);
 		addKeyListener(this);
 		setFocusable(true);
 		setFocusTraversalKeysEnabled(true);
@@ -79,9 +81,9 @@ public class Game extends JPanel implements KeyListener,ActionListener{
 		g.fillRect(20,80,840,560);
 		g.setColor(Color.RED);
 		g.setFont(new Font("TimesRoman", Font.PLAIN, 30));
-		g.drawString("IamSnaky",350,50);
+		g.drawString("IamSnaky                   Score: "+(size-1)*10,350,50);
 		if(ov){
-			System.out.println("Paint over");
+			//System.out.println("Paint over");
 			over(g);
 		}
 		if(pause){
@@ -101,11 +103,10 @@ public class Game extends JPanel implements KeyListener,ActionListener{
 			if(flag)
 				size++;
 			flag=false;
-			int count=0;
 			for(int i=1;i<size;i++){
-				System.out.println("Running");
+				//System.out.println("Running");
 				if(sx[0]==sx[i] && sy[0]==sy[i]){
-					System.out.println("Game over");
+					//System.out.println("Game over");
 					right=false;
 					left=false;
 					up=false;
@@ -172,7 +173,7 @@ public class Game extends JPanel implements KeyListener,ActionListener{
 				//sy[size++]=sy[size-1]+20;
 				flag=true;
 				//System.out.println("sy[size-2]: "+sy[size-2]+" sy[size-1]: "+sy[size-1]);
-				System.out.println("Size: "+size);
+				//System.out.println("Size: "+size);
 				//System.out.println("Yes");
 			}
 			/*if(flag)
@@ -202,7 +203,7 @@ public class Game extends JPanel implements KeyListener,ActionListener{
 				//sx[i]=sx[i-1];//+20;
 				//sy[i]=sy[i-1];//+20;
 				}*/
-				System.out.println("Count: "+count);
+				//System.out.println("Count: "+count);
 		//}
 		//System.out.println("Running");
 		repaint();
@@ -217,7 +218,7 @@ public class Game extends JPanel implements KeyListener,ActionListener{
 			left=false;
 			up=false;
 			down=false;
-			System.out.println(sx[0]+" "+sy[0]);
+			//System.out.println(sx[0]+" "+sy[0]);
 		}
 		if(key.getKeyCode()==KeyEvent.VK_RIGHT){
 			if(!left||size==1){
