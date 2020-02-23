@@ -1,5 +1,5 @@
 # **Introduction:**
-IamSnaky is a snake game written in JAVA.  
+IamSnaky is a simple snake game written in JAVA.  
 Snaky can now do all the things like from eating the food to dying.  
 Though some bugs need to be fixed but apart from those it's playable.  
 
